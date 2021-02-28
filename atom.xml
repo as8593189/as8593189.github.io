@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://as8593189.github.io</id>
     <title>风丿雪的博客</title>
-    <updated>2021-02-28T02:13:52.768Z</updated>
+    <updated>2021-02-28T15:24:48.875Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://as8593189.github.io"/>
     <link rel="self" href="https://as8593189.github.io/atom.xml"/>
@@ -10,6 +10,46 @@
     <logo>https://as8593189.github.io/images/avatar.png</logo>
     <icon>https://as8593189.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 风丿雪的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[算法_深搜]]></title>
+        <id>https://as8593189.github.io/post/suan-fa-_-shen-sou/</id>
+        <link href="https://as8593189.github.io/post/suan-fa-_-shen-sou/">
+        </link>
+        <updated>2021-02-28T15:19:35.000Z</updated>
+        <content type="html"><![CDATA[<p>深搜：<br>
+//先搞一个flag<br>
+Visit[v]=true;<br>
+//再遍历<br>
+for(v=0;v&lt;num;v++){<br>
+if(!Visit[v]){<br>
+DFS(V);<br>
+}<br>
+}<br>
+例如今天做的一个题，对矩阵找字符串。总结来为三点：<br>
+①给出循环终止条件：不符合题意的。<br>
+②访问这个节点，修改其flag。<br>
+③DFS递归他自己。<br>
+④恢复现场，或是回溯。<br>
+public boolean DFS(char[] words ,int i,int j,int k,char[][] board) {<br>
+//越界或是走一步不是想要的结果<br>
+if (i&lt;0||i&gt;=board.length||j&lt;0||j&gt;=board[0].length||words[k]!=board[i][j]) {<br>
+return false;<br>
+}<br>
+//若是最终完成遍历，返回正确<br>
+if (k==(words.length-1)) {<br>
+return true;<br>
+}<br>
+//已经访问了，设为0<br>
+board[i][j]='\0';<br>
+//对相邻节点遍历<br>
+boolean flag = DFS(words,i+1,j,k+1,board) || DFS(words,i-1,j,k+1,board) ||<br>
+DFS(words,i,j+1,k+1,board) || DFS(words,i,j-1,k+1,board);<br>
+//恢复节点<br>
+board[i][j]=words[k];<br>
+return flag;<br>
+}</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[算法_二维数组类题型]]></title>
         <id>https://as8593189.github.io/post/suan-fa-_-er-wei-shu-zu-lei-ti-xing/</id>
