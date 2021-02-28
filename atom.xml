@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://as8593189.github.io</id>
     <title>风丿雪的博客</title>
-    <updated>2021-02-27T13:01:56.735Z</updated>
+    <updated>2021-02-28T02:13:52.768Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://as8593189.github.io"/>
     <link rel="self" href="https://as8593189.github.io/atom.xml"/>
@@ -10,6 +10,53 @@
     <logo>https://as8593189.github.io/images/avatar.png</logo>
     <icon>https://as8593189.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 风丿雪的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[算法_二维数组类题型]]></title>
+        <id>https://as8593189.github.io/post/suan-fa-_-er-wei-shu-zu-lei-ti-xing/</id>
+        <link href="https://as8593189.github.io/post/suan-fa-_-er-wei-shu-zu-lei-ti-xing/">
+        </link>
+        <updated>2021-02-28T02:04:49.000Z</updated>
+        <content type="html"><![CDATA[<p>（1）判空条件<br>
+①数组地址本身为空<br>
+matrix<mark>null<br>
+②数组本身定义为空<br>
+matrix.length</mark>0<br>
+③一维数组为空且二维数组也为空的空数组<br>
+****此时一维数组长度为1，二维数组长度为0<br>
+matrix.length<mark>1&amp;&amp;matrix[0].length</mark>0<br>
+（2）二维数组本身可以看成是B+树<br>
+从右上开始看。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[算法_查找方法总结]]></title>
+        <id>https://as8593189.github.io/post/suan-fa-_-cha-zhao-fang-fa-zong-jie/</id>
+        <link href="https://as8593189.github.io/post/suan-fa-_-cha-zhao-fang-fa-zong-jie/">
+        </link>
+        <updated>2021-02-28T02:02:26.000Z</updated>
+        <content type="html"><![CDATA[<p>（1）二分法：<br>
+注意以下要点：①判空的必要②起始点要为0以防越界，判断条件为≤<br>
+//判断下开头<br>
+if (matrix[j][0]==target) {<br>
+return true;<br>
+}<br>
+//以0开始，以length结束<br>
+int low =0;<br>
+int high = matrix[j].length-1;<br>
+//条件为小于等于<br>
+while(low&lt;=high) {<br>
+int mid = (low+high)/2;<br>
+if (target == matrix[j][mid]) {<br>
+return true;<br>
+} else if (target&lt;matrix[j][mid]) {<br>
+high = mid -1;<br>
+} else {<br>
+low=mid+1;<br>
+}<br>
+}<br>
+return false;</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2021_2_27 吐槽_吐血！！！]]></title>
         <id>https://as8593189.github.io/post/2021_2_27-tu-cao-_-tu-xie/</id>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>标签列表 | 风丿雪的博客</title>
+<title>算法_查找方法总结 | 风丿雪的博客</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,7 +18,16 @@
 
 
 
-    <meta name="description" content="随便写写，随便记记。恰逢最好的时节，做最喜欢的事。">
+    <meta name="description" content="（1）二分法：
+注意以下要点：①判空的必要②起始点要为0以防越界，判断条件为≤
+//判断下开头
+if (matrix[j][0]==target) {
+return true;
+}
+//以0开始，以length结束
+int low =0;
+..." />
+    <meta name="keywords" content="算法" />
   </head>
   <body>
     <div id="app" class="main">
@@ -88,18 +97,58 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="tag-list-title">标签列表</h2>
-          <div class="tags-container">
+          <div class="post-detail">
+            <h2 class="post-title">算法_查找方法总结</h2>
+            <div class="post-date">2021-02-28</div>
             
-              <a class="tag" href="https://as8593189.github.io/tag/ocqFygBaC/">算法</a>
+            <div class="post-content" v-pre>
+              <p>（1）二分法：<br>
+注意以下要点：①判空的必要②起始点要为0以防越界，判断条件为≤<br>
+//判断下开头<br>
+if (matrix[j][0]==target) {<br>
+return true;<br>
+}<br>
+//以0开始，以length结束<br>
+int low =0;<br>
+int high = matrix[j].length-1;<br>
+//条件为小于等于<br>
+while(low&lt;=high) {<br>
+int mid = (low+high)/2;<br>
+if (target == matrix[j][mid]) {<br>
+return true;<br>
+} else if (target&lt;matrix[j][mid]) {<br>
+high = mid -1;<br>
+} else {<br>
+low=mid+1;<br>
+}<br>
+}<br>
+return false;</p>
+
+            </div>
             
-              <a class="tag" href="https://as8593189.github.io/tag/AQaow4Bmj/">吐槽</a>
+              <div class="tag-container">
+                
+                  <a href="https://as8593189.github.io/tag/ocqFygBaC/" class="tag">
+                    算法
+                  </a>
+                
+              </div>
             
-              <a class="tag" href="https://as8593189.github.io/tag/hSGB1ekZV/">日常</a>
             
-              <a class="tag" href="https://as8593189.github.io/tag/GijfvNG5O/">环境</a>
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://as8593189.github.io/post/2021_2_27-tu-cao-_-tu-xie/">
+                  <h3 class="post-title">
+                    2021_2_27 吐槽_吐血！！！
+                  </h3>
+                </a>
+              </div>
             
+
+            
+
           </div>
+
         </div>
       </div>
     </div>
