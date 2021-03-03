@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://as8593189.github.io</id>
     <title>风丿雪的博客</title>
-    <updated>2021-03-01T14:53:45.672Z</updated>
+    <updated>2021-03-03T15:23:46.677Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://as8593189.github.io"/>
     <link rel="self" href="https://as8593189.github.io/atom.xml"/>
@@ -11,13 +11,30 @@
     <icon>https://as8593189.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 风丿雪的博客</rights>
     <entry>
+        <title type="html"><![CDATA[算法_动态规划]]></title>
+        <id>https://as8593189.github.io/post/suan-fa-_-dong-tai-gui-hua/</id>
+        <link href="https://as8593189.github.io/post/suan-fa-_-dong-tai-gui-hua/">
+        </link>
+        <updated>2021-03-03T12:45:22.000Z</updated>
+        <content type="html"><![CDATA[<p>要知道一个初始值 dp[1]\dp[2]之类<br>
+其次，我们设在某状态下dp[i]为我们要求的目标<br>
+留意以下状态 dp[i-j] dp[i] j*(i-j)</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[算法_常用方法]]></title>
         <id>https://as8593189.github.io/post/suan-fa-_-chang-yong-fang-fa/</id>
         <link href="https://as8593189.github.io/post/suan-fa-_-chang-yong-fang-fa/">
         </link>
         <updated>2021-03-01T14:48:12.000Z</updated>
         <content type="html"><![CDATA[<p>1.大数快速幂取余<br>
-设a为大数,,把a的n次方变为(a²)的1/2次方或是a*((a²))的1/2次方</p>
+设a为大数,,把a的n次方变为(a²)的1/2次方或是a*((a²))的1/2次方<br>
+2.二进制快速幂<br>
+设n的二进制为b1 b2 b3 ... bm<br>
+然后x的n次方就是 x 的(b1 b2 ... bn次方)也即是 x 的 (2的0次方<em>b1  +  2的一次方</em>b2      +....+ 2的n次方*bm-1)次方<br>
+bm可以用 位运算做。b1 为 n&amp;1  b2为 (n&gt;&gt;1)&amp;1<br>
+每次循环就能得到 x0   x1  x²这些<br>
+3.取相反数时，可能超出int的表达范围，因此我们可以用long来计算</p>
 ]]></content>
     </entry>
     <entry>
