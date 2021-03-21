@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>吐槽 | 风丿雪的博客</title>
+<title>Linux_mysql安装和使用中出现的问题 | 风丿雪的博客</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,7 +18,10 @@
 
 
 
-    <meta name="description" content="随便写写，随便记记。恰逢最好的时节，做最喜欢的事。">
+    <meta name="description" content="1.安装第一坑：位数（32位/64位）
+2.第二坑 sysbench等软件需要额外装lib，官网上有，注意位数，尤其是16.so 之类的东西，都需要额外的driver包，可能还需要建立其他的软连接
+3.第三坑 默认密码不能用，进不去mysq..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -88,28 +91,32 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: 吐槽</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://as8593189.github.io/post/2021_2_27-tu-cao-_-tu-xie/">
-                  <h2 class="post-title">2021_2_27 吐槽_吐血！！！</h2>
-                </a>
-                <div class="post-date">
-                  2021-02-27
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
+          <div class="post-detail">
+            <h2 class="post-title">Linux_mysql安装和使用中出现的问题</h2>
+            <div class="post-date">2021-03-21</div>
+            
+            <div class="post-content" v-pre>
+              <p>1.安装第一坑：位数（32位/64位）<br>
+2.第二坑 sysbench等软件需要额外装lib，官网上有，注意位数，尤其是16.so 之类的东西，都需要额外的driver包，可能还需要建立其他的软连接<br>
+3.第三坑 默认密码不能用，进不去mysql。方法是修改配置文件，加入跳过密码验证指令，然后登陆后清除原密码，用更新语句加上新密码<br>
+4.第四坑 进不去mysql命令行。无论敲什么都是，Client does not support authentication protocol，那么应该进入mysql bin目录，手动启动mysql程序，然后--user --password 输入账号密码即可</p>
 
-          <div class="pagination-container">
-  
-  
-</div>
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://as8593189.github.io/post/suan-fa-_-er-cha-shu-di-gui/">
+                  <h3 class="post-title">
+                    算法_二叉树递归
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
 
         </div>
       </div>

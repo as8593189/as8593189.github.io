@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://as8593189.github.io</id>
     <title>风丿雪的博客</title>
-    <updated>2021-03-03T15:23:46.677Z</updated>
+    <updated>2021-03-21T08:17:29.853Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://as8593189.github.io"/>
     <link rel="self" href="https://as8593189.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://as8593189.github.io/images/avatar.png</logo>
     <icon>https://as8593189.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 风丿雪的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[Linux_mysql安装和使用中出现的问题]]></title>
+        <id>https://as8593189.github.io/post/linux_mysql-an-zhuang-he-shi-yong-zhong-chu-xian-de-wen-ti/</id>
+        <link href="https://as8593189.github.io/post/linux_mysql-an-zhuang-he-shi-yong-zhong-chu-xian-de-wen-ti/">
+        </link>
+        <updated>2021-03-21T08:02:44.000Z</updated>
+        <content type="html"><![CDATA[<p>1.安装第一坑：位数（32位/64位）<br>
+2.第二坑 sysbench等软件需要额外装lib，官网上有，注意位数，尤其是16.so 之类的东西，都需要额外的driver包，可能还需要建立其他的软连接<br>
+3.第三坑 默认密码不能用，进不去mysql。方法是修改配置文件，加入跳过密码验证指令，然后登陆后清除原密码，用更新语句加上新密码<br>
+4.第四坑 进不去mysql命令行。无论敲什么都是，Client does not support authentication protocol，那么应该进入mysql bin目录，手动启动mysql程序，然后--user --password 输入账号密码即可</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[算法_二叉树递归]]></title>
+        <id>https://as8593189.github.io/post/suan-fa-_-er-cha-shu-di-gui/</id>
+        <link href="https://as8593189.github.io/post/suan-fa-_-er-cha-shu-di-gui/">
+        </link>
+        <updated>2021-03-08T13:34:31.000Z</updated>
+        <content type="html"><![CDATA[<p>①递归终止条件<br>
+②由某层到某层的条件是什么</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[算法_动态规划]]></title>
         <id>https://as8593189.github.io/post/suan-fa-_-dong-tai-gui-hua/</id>
