@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://as8593189.github.io</id>
     <title>风丿雪的博客</title>
-    <updated>2021-03-21T08:17:29.853Z</updated>
+    <updated>2021-04-18T04:29:02.793Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://as8593189.github.io"/>
     <link rel="self" href="https://as8593189.github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://as8593189.github.io/images/avatar.png</logo>
     <icon>https://as8593189.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, 风丿雪的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[算法_map按value排序]]></title>
+        <id>https://as8593189.github.io/post/suan-fa-_map-an-value-pai-xu/</id>
+        <link href="https://as8593189.github.io/post/suan-fa-_map-an-value-pai-xu/">
+        </link>
+        <updated>2021-04-18T04:25:21.000Z</updated>
+        <content type="html"><![CDATA[<p>2021.4.18 美团笔试第一题有感 总是搞忘了，还是记一下<br>
+①实现comparator接口<br>
+②map用list保存List&lt;Map.Entry&lt;,&gt;&gt; = arraylist(map.entrySet())</p>
+<p>①Comparator&lt;Map.Entry&lt;String, Double&gt;&gt; valueComparator = new         Comparator&lt;Map.Entry&lt;String, Double&gt;&gt;() {<br>
+@Override<br>
+public int compare(Entry&lt;String, Double&gt; o1, Entry&lt;String, Double&gt; o2) {<br>
+return o1.getValue().compareTo(o2.getValue());<br>
+}<br>
+};<br>
+// map转换成list进行排序<br>
+List&lt;Map.Entry&lt;String, Double&gt;&gt; list = new ArrayList&lt;Map.Entry&lt;String, Double&gt;&gt;(avgMap.entrySet());<br>
+// 排序<br>
+Collections.sort(list, valueComparator);</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Linux_mysql安装和使用中出现的问题]]></title>
         <id>https://as8593189.github.io/post/linux_mysql-an-zhuang-he-shi-yong-zhong-chu-xian-de-wen-ti/</id>
